@@ -1,0 +1,20 @@
+;	STMicroelectronics Workspace file
+
+[Version]
+Keyword=ST7Workspace-V0.7
+
+[Project0]
+Filename=lab3_ex4.stp
+Dependencies=
+
+[Project1]
+Filename=lab3_ex3.stp
+Dependencies=
+
+[Project2]
+Filename=lab3_ex5.stp
+Dependencies=
+[Options]
+ActiveProject=lab3_ex5
+ActiveConfig=Debug
+AddSortedElements=1

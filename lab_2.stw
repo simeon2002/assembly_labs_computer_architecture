@@ -1,0 +1,12 @@
+;	STMicroelectronics Workspace file
+
+[Version]
+Keyword=ST7Workspace-V0.7
+
+[Project0]
+Filename=..\..\..\..\..\program files (x86)\stmicroelectronics\st_toolset\stvd\lab_2.stp
+Dependencies=
+[Options]
+ActiveProject=lab_2
+ActiveConfig=Debug
+AddSortedElements=1

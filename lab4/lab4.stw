@@ -1,0 +1,16 @@
+;	STMicroelectronics Workspace file
+
+[Version]
+Keyword=ST7Workspace-V0.7
+
+[Project0]
+Filename=lab4_adc.stp
+Dependencies=
+
+[Project1]
+Filename=indirect_addressing.stp
+Dependencies=
+
+[Project2]
+Filename=parameter_passing.stp
+Dependencies=
