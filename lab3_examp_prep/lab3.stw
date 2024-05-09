@@ -1,0 +1,20 @@
+;	STMicroelectronics Workspace file
+
+[Version]
+Keyword=ST7Workspace-V0.7
+
+[Project0]
+Filename=ex1.stp
+Dependencies=
+
+[Project1]
+Filename=ex3.stp
+Dependencies=
+
+[Project2]
+Filename=ex4.stp
+Dependencies=
+
+[Project3]
+Filename=ex5.stp
+Dependencies=

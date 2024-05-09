@@ -60,7 +60,7 @@ init
 	; setup of timer.
 	MOV TIM3_CR1, #%00000000 ; timer off atm.
 	MOV TIM3_PSCR, #$07 ; prescaler of 128
-	MOV TIM3_EGR, #%00000001  ; update event needs to update prescaler
+	MOV TIM3_EGR, #%00000000  ; update event needs to update prescaler
 	mov TIM3_IER, #$01 ; tim3 interrupt enabled
 	MOV TIM3_ARRH, #$1e
 	MOV TIM3_ARRL, #$84

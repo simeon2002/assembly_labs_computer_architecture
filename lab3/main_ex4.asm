@@ -65,6 +65,7 @@ init ; init ports and peripherals
 	MOV TIM3_IER,#$01 ; TIM3 interrupt on update enabled 
 	MOV TIM3_ARRH, #$1E ;500ms timer
 	MOV TIM3_ARRL, #$85
+	;BRES TIM3_SR1, #0 ;IF UNCOMMENTED IT WILL SUPPRESS THE INITIAL INTERRUPT
 	
 	; initialize index
 	LD A, #$0

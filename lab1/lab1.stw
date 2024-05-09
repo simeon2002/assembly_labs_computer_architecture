@@ -1,0 +1,12 @@
+;	STMicroelectronics Workspace file
+
+[Version]
+Keyword=ST7Workspace-V0.7
+
+[Project0]
+Filename=knight_rider.stp
+Dependencies=
+[Options]
+ActiveProject=knight_rider
+ActiveConfig=Debug
+AddSortedElements=1

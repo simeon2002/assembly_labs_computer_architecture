@@ -1,0 +1,28 @@
+
+Segment List
+------------
+
+c:\users\simeo\qsync\university\computer architectures\lab3_examp_prep\ex3.asm[1]    5-    8         0 -       11                 'ram0'  [void]
+c:\users\simeo\qsync\university\computer architectures\lab3_examp_prep\ex3.asm[2]    9-   73      8080 -     80C5                 'rom'  [textdata]
+c:\users\simeo\qsync\university\computer architectures\lab3_examp_prep\ex3.asm[3]   74-  107      8000 -     807F                 'vectit'  [data]
+
+
+Class List
+----------
+
+0 '        ram0'   byte from        0 to       11 (lim       FF) =  6% D
+0 '        ram1'   byte from      100 to       FF (lim      5FF) =  0% V
+0 '       stack'   byte from      600 to      5FF (lim      7FF) =  0% V
+0 '      eeprom'   byte from     4000 to     3FFF (lim     43FF) =  0% V
+0 '         rom'   byte from     8080 to     80C5 (lim     BFFF) =  0% CS
+0 '      vectit'   byte from     8000 to     807F (lim     807F) =100% S
+
+
+
+External Label list
+-------------------
+
+Symbol Name                       Value     Scope  Def(line)
+
+
+0 labels

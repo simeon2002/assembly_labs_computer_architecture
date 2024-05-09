@@ -14,3 +14,7 @@ Dependencies=
 [Project2]
 Filename=parameter_passing.stp
 Dependencies=
+[Options]
+ActiveProject=parameter_passing
+ActiveConfig=Debug
+AddSortedElements=1

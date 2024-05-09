@@ -1,0 +1,16 @@
+;	STMicroelectronics Workspace file
+
+[Version]
+Keyword=ST7Workspace-V0.7
+
+[Project0]
+Filename=lab2.stp
+Dependencies=
+
+[Project1]
+Filename=doorbell.stp
+Dependencies=
+[Options]
+ActiveProject=doorbell
+ActiveConfig=Debug
+AddSortedElements=1

@@ -920,3 +920,10 @@ No errors on assembly of 'c:\users\simeo\qsync\university\computer architectures
 
 c:\users\simeo\qsync\university\computer architectures\lab3\main.asm(10): as1 : Fatal 999: Cannot mix Storage and Static definitions in same segment! 'S->D'
 
+
+c:\users\simeo\qsync\university\computer architectures\lab3\main.asm(10): as1 : Fatal 999: Cannot mix Storage and Static definitions in same segment! 'S->D'
+
+No errors on assembly of 'c:\users\simeo\qsync\university\computer architectures\lab3\main_ex4.asm'
+No errors on assembly of 'c:\users\simeo\qsync\university\computer architectures\lab3\main_ex5.asm'
+No errors on assembly of 'c:\users\simeo\qsync\university\computer architectures\lab3\main_ex5.asm'
+No errors on assembly of 'c:\users\simeo\qsync\university\computer architectures\lab3\main_ex5.asm'
