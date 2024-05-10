@@ -3,18 +3,11 @@ stm8/
 	#include "mapping.inc"
 	#include "stm8s105k.inc"
 
-	segment 'ram1'
-va ds.b
-vb ds.b
-va2 ds.w
-vb2 ds.w
-ptr_va ds.w
-ptr_vb ds.w
-sum ds.b
-
-
-
+	segment 'ram0'
+index ds.b
 	segment 'rom'
+	
+LIMIT DC.B %10100110
 main.l
 	; initialize SP
 	ldw X,#stack_end
@@ -54,52 +47,47 @@ clear_stack.l
 	cpw X,#stack_end	
 	jrule clear_stack
 	
-	ldw X, #6
-	mov va, #10
-	ldw va2, X
-	ldw X, #10
-	mov vb, #6
-	ldw vb2, X
-
-	ldw X, #va
-	ldw Y, #vb
-	ldw ptr_va, X
-	ldw ptr_vb, Y
-	push ptr_va
-	push ptr_vb
+init 
+	; setup button e5 as interrupt
+	MOV PE_DDR, #$0
+	MOV PE_CR1, #$0
+	BSET PE_CR2, #5
+	MOV EXTI_CR2, #$01
 	
-
-	call adder8I ; call subroutine
-	pop a
-	pop a
+	; setup button c2 as pollling
+	MOV PC_DDR, #$0
+	MOV PC_CR1, #$0
+	MOV PC_CR2, #$0
 	
-	ldw X, va2
-	pushw X
-	ldw X, vb2
-	pushw X
+	; setup port D 
+	MOV PD_DDR, #$ff
+	MOV PD_CR1, #$FF
+	MOV PD_CR2, #$0
 	
-	call adder16I
-	popw Y
-	popw X
-
+	MOV index, #$0
+	RIM
 	
 infinite_loop.l
+	BTJF PC_IDR, #2, C2_pressed
+	jra infinite_loop
+
+C2_pressed
+	MOV PD_ODR, #%10101010
 	jra infinite_loop
 	
-adder8I
-	ldw X, #1
-	ld a, ([ptr_va],X)
-	add a, ([ptr_vb],X)
-	
-	ret
-
-adder16I 
-	ldw X, (3,SP)
-	addw X, (5,SP)
-	ret
 	interrupt NonHandledInterrupt
 NonHandledInterrupt.l
 	iret
+
+	interrupt ISR_PE
+ISR_PE
+	ld A, PD_ODR
+	cp A, LIMIT
+	jrule limit_reached
+	dec PD_ODR
+limit_reached 
+	iret
+	
 
 	segment 'vectit'
 	dc.l {$82000000+main}									; reset
@@ -111,7 +99,7 @@ NonHandledInterrupt.l
 	dc.l {$82000000+NonHandledInterrupt}	; irq4
 	dc.l {$82000000+NonHandledInterrupt}	; irq5
 	dc.l {$82000000+NonHandledInterrupt}	; irq6
-	dc.l {$82000000+NonHandledInterrupt}	; irq7
+	dc.l {$82000000+ISR_PE}	; irq7
 	dc.l {$82000000+NonHandledInterrupt}	; irq8
 	dc.l {$82000000+NonHandledInterrupt}	; irq9
 	dc.l {$82000000+NonHandledInterrupt}	; irq10

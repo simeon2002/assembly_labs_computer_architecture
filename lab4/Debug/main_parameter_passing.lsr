@@ -1,4 +1,4 @@
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 1  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -60,7 +60,7 @@ Page 1  Assembler
   29  000000                                 EXTERN   PB_ODR.w      ; Port B data output latch 
                                                                 ;register
   30                         
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 2  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -121,7 +121,7 @@ Page 2  Assembler
   72  000000                                 EXTERN   PE_DDR.w      ; Port E data direction 
                                                                 ;register
   73                         
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 3  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -182,7 +182,7 @@ Page 3  Assembler
                                                                 ;register 2
  116                         
  117                         ; Reset (RST)
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 4  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -243,7 +243,7 @@ Page 4  Assembler
  161  000000                                 EXTERN   IWDG_KR.w     ; IWDG Key Register
  162                         
  163  000000                                 EXTERN   IWDG_PR.w     ; IWDG Prescaler Register
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 5  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -304,7 +304,7 @@ Page 5  Assembler
  211  000000                                 EXTERN   I2C_OARH.w    ; I2C Own address register high
  212                         
  213  000000                                 EXTERN   I2C_DR.w      ; I2C data register
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 6  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -365,7 +365,7 @@ Page 6  Assembler
  262                         
  263  000000                                 EXTERN   TIM1_CR2.w    ; TIM1 Control register 2
  264                         
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 7  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -426,7 +426,7 @@ Page 7  Assembler
  308                         
  309  000000                                 EXTERN   TIM1_CCR2L.w  ; Data bits Low
  310                         
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 8  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -487,7 +487,7 @@ Page 8  Assembler
  356  000000                                 EXTERN   TIM2_ARRL.w   ; Data bits Low
  357                         
  358  000000                                 EXTERN   TIM2_CCR1H.w  ; Data bits High
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 9  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -548,7 +548,7 @@ Page 9  Assembler
  407                         ; 8-Bit  Timer 4 (TIM4)
  408                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                ;;;;;;
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 10  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -609,7 +609,7 @@ Page 10  Assembler
  460                         
  461  000000                                 EXTERN   ADC_DB8RL.w   ; Data Buffer register 8 Low
  462                         
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 11  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -670,7 +670,7 @@ Page 11  Assembler
  509  000000                                 EXTERN   ITC_SPR2.w    ; Interrupt Software priority 
                                                                 ;register 2
  510                         
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 12  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -695,127 +695,145 @@ Page 12  Assembler
    6                                   segment  'ram1'
    7  000000                       va        ds.b     
    8  000001                       vb        ds.b     
-   9  000002                       sum       ds.b     
-  10                         
-  11                         
-  12                                   segment  'rom'
-  13                         main.l    
-  14                                                          ; initialize SP
-  15  000000   AE07FF                        ldw      X,#stack_end
-  16  000003   94                            ldw      SP,X
-  17                         
-  18  000004                                 #ifdef   1             
-  19                                                          ; clear RAM0
-  20  000000                       ram0_start.b  EQU      $0
-  21  0000FF                       ram0_end.b  EQU      $FF
-  22  000004   AE0000                        ldw      X,#ram0_start
-  23                         clear_ram0.l  
-  24  000007   7F                            clr      (X)
-  25  000008   5C                            incw     X
-  26  000009   A300FF                        cpw      X,#ram0_end   
-  27  00000C R 23F9                          jrule    clear_ram0
-  28  00000E                                 #endif   
-  29                         
-  30  00000E                                 #ifdef   1
-  31                                                          ; clear RAM1
-  32  000100                       ram1_start.w  EQU      $100
-  33  0005FF                       ram1_end.w  EQU      $5FF          
-  34  00000E   AE0100                        ldw      X,#ram1_start
-  35                         clear_ram1.l  
-  36  000011   7F                            clr      (X)
-  37  000012   5C                            incw     X
-  38  000013   A305FF                        cpw      X,#ram1_end   
-  39  000016 R 23F9                          jrule    clear_ram1
-  40  000018                                 #endif   
-  41                         
-  42                                                          ; clear stack
-  43  000600                       stack_start.w  EQU      $600
-  44  0007FF                       stack_end.w  EQU      $7FF
-  45  000018   AE0600                        ldw      X,#stack_start
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+   9  000002                       va2       ds.w     
+  10  000004                       vb2       ds.w     
+  11  000006                       ptr_va    ds.w     
+  12  000008                       ptr_vb    ds.w     
+  13  00000A                       sum       ds.b     
+  14                         
+  15                         
+  16                         
+  17                                   segment  'rom'
+  18                         main.l    
+  19                                                          ; initialize SP
+  20  000000   AE07FF                        ldw      X,#stack_end
+  21  000003   94                            ldw      SP,X
+  22                         
+  23  000004                                 #ifdef   1             
+  24                                                          ; clear RAM0
+  25  000000                       ram0_start.b  EQU      $0
+  26  0000FF                       ram0_end.b  EQU      $FF
+  27  000004   AE0000                        ldw      X,#ram0_start
+  28                         clear_ram0.l  
+  29  000007   7F                            clr      (X)
+  30  000008   5C                            incw     X
+  31  000009   A300FF                        cpw      X,#ram0_end   
+  32  00000C R 23F9                          jrule    clear_ram0
+  33  00000E                                 #endif   
+  34                         
+  35  00000E                                 #ifdef   1
+  36                                                          ; clear RAM1
+  37  000100                       ram1_start.w  EQU      $100
+  38  0005FF                       ram1_end.w  EQU      $5FF          
+  39  00000E   AE0100                        ldw      X,#ram1_start
+  40                         clear_ram1.l  
+  41  000011   7F                            clr      (X)
+  42  000012   5C                            incw     X
+  43  000013   A305FF                        cpw      X,#ram1_end   
+  44  000016 R 23F9                          jrule    clear_ram1
+  45  000018                                 #endif   
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 13  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
-  46                         clear_stack.l  
-  47  00001B   7F                            clr      (X)
-  48  00001C   5C                            incw     X
-  49  00001D   A307FF                        cpw      X,#stack_end  
-  50  000020 R 23F9                          jrule    clear_stack
-  51                                   
-  52  000022 R 35030000                      mov      va, #3
-  53  000026 R 35070000                      mov      vb, #7
-  54  00002A R 72530000                      cpl      va
-  55  00002E R C60000                        ld       a, va
-  56  000031   AB01                          add      a, #1
-  57  000033 R C70000                        ld       va , a
-  58  000036 R 72530000                      cpl      vb
-  59  00003A R C60000                        ld       a, vb
-  60  00003D   AB01                          add      a ,#1
-  61  00003F R C70000                        ld       vb, a
-  62                                   
-  63  000042 R C60000                        ld       a, va
-  64  000045   4B07                          push     #7            ; calling program pushes 
-                                                                ;parameters on the stack
-  65                                                          ; note: they are pass by value, 
-                                                                ;not by reference.
-  66  000047 R C60000                        ld       a, vb
-  67                                   
-  68  00004A R CD0000                        call     adder8I       ; call subroutine
-  69  00004D   84                            pop      a
+  46                         
+  47                                                          ; clear stack
+  48  000600                       stack_start.w  EQU      $600
+  49  0007FF                       stack_end.w  EQU      $7FF
+  50  000018   AE0600                        ldw      X,#stack_start
+  51                         clear_stack.l  
+  52  00001B   7F                            clr      (X)
+  53  00001C   5C                            incw     X
+  54  00001D   A307FF                        cpw      X,#stack_end  
+  55  000020 R 23F9                          jrule    clear_stack
+  56                                   
+  57  000022   AE0006                        ldw      X, #6
+  58  000025 R 350A0000                      mov      va, #10
+  59  000029 R CF0000                        ldw      va2, X
+  60  00002C   AE000A                        ldw      X, #10
+  61  00002F R 35060000                      mov      vb, #6
+  62  000033 R CF0000                        ldw      vb2, X
+  63                         
+  64  000036 R AE0000                        ldw      X, #va
+  65  000039 R 90AE0000                      ldw      Y, #vb
+  66  00003D R CF0000                        ldw      ptr_va, X
+  67  000040 R 90CF0000                      ldw      ptr_vb, Y
+  68  000044 R 3B0000                        push     ptr_va
+  69  000047 R 3B0000                        push     ptr_vb
   70                                   
   71                         
-  72                                   
-  73                         infinite_loop.l  
-  74  00004E R 20FE                          jra      infinite_loop
+  72  00004A R CD0000                        call     adder8I       ; call subroutine
+  73  00004D   84                            pop      a
+  74  00004E   84                            pop      a
   75                                   
-  76                         adder8I   
-  77  000050   1B03                          add      a, (3,sp)
-  78  000052   81                            ret      
-  79                         
-  80  000053 R                               interrupt NonHandledInterrupt
-  81                         NonHandledInterrupt.l  
-  82  000053   80                            iret     
-  83                         
-  84                                   segment  'vectit'
-  85  000000 R 00000000                      dc.l     {$82000000+main}  ; reset
-  86  000004 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; trap
-  87  000008 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq0
-  88  00000C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq1
-  89  000010 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq2
-  90  000014 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq3
-  91  000018 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq4
-  92  00001C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq5
-  93  000020 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq6
-  94  000024 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq7
-  95  000028 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq8
-  96  00002C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq9
-  97  000030 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq10
-  98  000034 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq11
-  99  000038 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq12
- 100  00003C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq13
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+  76  00004F R CE0000                        ldw      X, va2
+  77  000052   89                            pushw    X
+  78  000053 R CE0000                        ldw      X, vb2
+  79  000056   89                            pushw    X
+  80                                   
+  81  000057 R CD0000                        call     adder16I
+  82  00005A   9085                          popw     Y
+  83  00005C   85                            popw     X
+  84                         
+  85                                   
+  86                         infinite_loop.l  
+  87  00005D R 20FE                          jra      infinite_loop
+  88                                   
+  89                         adder8I   
+  90  00005F   AE0001                        ldw      X, #1
+  91  000062 R 72D60000                      ld       a, ([ptr_va],X)
+  92  000066 R 72DB0000                      add      a, ([ptr_vb],X)
+  93                                   
+  94  00006A   81                            ret      
+  95                         
+  96                         adder16I  
+  97  00006B   1E03                          ldw      X, (3,SP)
+  98  00006D   72FB05                        addw     X, (5,SP)
+  99  000070   81                            ret      
+ 100  000071 R                               interrupt NonHandledInterrupt
+ 101                         NonHandledInterrupt.l  
+ 102  000071   80                            iret     
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 14  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
- 101  000040 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq14
- 102  000044 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq15
- 103  000048 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq16
- 104  00004C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq17
- 105  000050 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq18
- 106  000054 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq19
- 107  000058 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq20
- 108  00005C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq21
- 109  000060 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq22
- 110  000064 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq23
- 111  000068 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq24
- 112  00006C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq25
- 113  000070 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq26
- 114  000074 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq27
- 115  000078 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq28
- 116  00007C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq29
- 117                         
- 118  000080                                 end      
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+ 103                         
+ 104                                   segment  'vectit'
+ 105  000000 R 00000000                      dc.l     {$82000000+main}  ; reset
+ 106  000004 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; trap
+ 107  000008 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq0
+ 108  00000C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq1
+ 109  000010 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq2
+ 110  000014 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq3
+ 111  000018 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq4
+ 112  00001C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq5
+ 113  000020 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq6
+ 114  000024 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq7
+ 115  000028 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq8
+ 116  00002C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq9
+ 117  000030 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq10
+ 118  000034 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq11
+ 119  000038 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq12
+ 120  00003C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq13
+ 121  000040 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq14
+ 122  000044 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq15
+ 123  000048 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq16
+ 124  00004C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq17
+ 125  000050 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq18
+ 126  000054 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq19
+ 127  000058 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq20
+ 128  00005C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq21
+ 129  000060 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq22
+ 130  000064 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq23
+ 131  000068 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq24
+ 132  00006C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq25
+ 133  000070 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq26
+ 134  000074 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq27
+ 135  000078 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq28
+ 136  00007C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq29
+ 137                         
+ 138  000080                                 end      
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 15  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -876,7 +894,7 @@ CLK_PCKENR2                       ????????         no  WORD  External   rel    1
 CLK_CANCCR                        ????????         no  WORD  External   rel    145  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
 CLK_HSITRIMR                      ????????         no  WORD  External   rel    147  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
 CLK_SWIMCCR                       ????????         no  WORD  External   rel    149  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 16  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -919,7 +937,7 @@ ITC_SPR5                          ????????         no  WORD  External   rel    5
 ITC_SPR6                          ????????         no  WORD  External   rel    517  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
 ITC_SPR7                          ????????         no  WORD  External   rel    519  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
 
-NonHandledInterrupt               00000053  interrupt  LONG  Internal   rel     81  private  text         1     0  -
+NonHandledInterrupt               00000071  interrupt  LONG  Internal   rel    101  private  text         1     0  -
 
 PA_ODR                            ????????         no  WORD  External   rel     16  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
 PA_IDR                            ????????         no  WORD  External   rel     18  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
@@ -937,7 +955,7 @@ PC_DDR                            ????????         no  WORD  External   rel     
 PC_CR1                            ????????         no  WORD  External   rel     48  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
 PC_CR2                            ????????         no  WORD  External   rel     50  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
 PD_ODR                            ????????         no  WORD  External   rel     55  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 17  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -998,7 +1016,7 @@ TIM1_CCR4H                        ????????         no  WORD  External   rel    3
 TIM1_CCR4L                        ????????         no  WORD  External   rel    317  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
 TIM1_BKR                          ????????         no  WORD  External   rel    319  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
 TIM1_DTR                          ????????         no  WORD  External   rel    321  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 18  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -1059,7 +1077,7 @@ UART2_CR3                         ????????         no  WORD  External   rel    2
 UART2_CR4                         ????????         no  WORD  External   rel    248  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
 UART2_CR5                         ????????         no  WORD  External   rel    250  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
 UART2_CR6                         ????????         no  WORD  External   rel    252  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
-STMicroelectronics assembler v4.52   (C)1987-2024   Wed May 08 13:02:25 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Thu May 09 23:11:56 2024
 Page 19  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm
 
@@ -1069,28 +1087,34 @@ UART2_PSCR                        ????????         no  WORD  External   rel    2
 WWDG_CR                           ????????         no  WORD  External   rel    154  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
 WWDG_WR                           ????????         no  WORD  External   rel    156  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.inc
 
-adder8I                               0050         no  WORD  Internal   rel     76  private  text         3     0  -
+adder8I                               005F         no  WORD  Internal   rel     89  private  text        12     0  -
+adder16I                              006B         no  WORD  Internal   rel     96  private  text         6     0  -
 
-clear_ram0                        00000007         no  LONG  Internal   rel     23  private  text        10     0  -
-clear_ram1                        00000011         no  LONG  Internal   rel     35  private  text        10     0  -
-clear_stack                       0000001B         no  LONG  Internal   rel     46  private  text        51     0  -
+clear_ram0                        00000007         no  LONG  Internal   rel     28  private  text        10     0  -
+clear_ram1                        00000011         no  LONG  Internal   rel     40  private  text        10     0  -
+clear_stack                       0000001B         no  LONG  Internal   rel     51  private  text        66     0  -
 
-infinite_loop                     0000004E         no  LONG  Internal   rel     73  private  text         2     0  -
+infinite_loop                     0000005D         no  LONG  Internal   rel     86  private  text         2     0  -
 
-main                              00000000         no  LONG  Internal   rel     13  private  text         7     0  -
+main                              00000000         no  LONG  Internal   rel     18  private  text         7     0  -
 
-ram0_start                              00         no  BYTE  Internal   ABS     20  private  text         0     0  -
-ram0_end                                FF         no  BYTE  Internal   ABS     21  private  text         0     0  -
-ram1_start                            0100         no  WORD  Internal   ABS     32  private  text         0     0  -
-ram1_end                              05FF         no  WORD  Internal   ABS     33  private  text         0     0  -
+ptr_va                                0006         no  WORD  Internal   rel     11  private  bss          2     2  -
+ptr_vb                                0008         no  WORD  Internal   rel     12  private  bss          2     2  -
 
-sum                                   0002         no  WORD  Internal   rel      9  private  bss          1     1  -
-stack_start                           0600         no  WORD  Internal   ABS     43  private  text         0     0  -
-stack_end                             07FF         no  WORD  Internal   ABS     44  private  text         0     0  -
+ram0_start                              00         no  BYTE  Internal   ABS     25  private  text         0     0  -
+ram0_end                                FF         no  BYTE  Internal   ABS     26  private  text         0     0  -
+ram1_start                            0100         no  WORD  Internal   ABS     37  private  text         0     0  -
+ram1_end                              05FF         no  WORD  Internal   ABS     38  private  text         0     0  -
+
+sum                                   000A         no  WORD  Internal   rel     13  private  bss          1     1  -
+stack_start                           0600         no  WORD  Internal   ABS     48  private  text         0     0  -
+stack_end                             07FF         no  WORD  Internal   ABS     49  private  text         0     0  -
 
 va                                    0000         no  WORD  Internal   rel      7  private  bss          1     1  -
 vb                                    0001         no  WORD  Internal   rel      8  private  bss          1     1  -
+va2                                   0002         no  WORD  Internal   rel      9  private  bss          2     2  -
+vb2                                   0004         no  WORD  Internal   rel     10  private  bss          2     2  -
 
 
-234 labels
+239 labels
 No errors on assembly of 'c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm'

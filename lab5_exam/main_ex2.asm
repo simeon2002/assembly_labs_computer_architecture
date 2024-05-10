@@ -2,19 +2,15 @@ stm8/
 
 	#include "mapping.inc"
 	#include "stm8s105k.inc"
-
-	segment 'ram1'
-va ds.b
-vb ds.b
-va2 ds.w
-vb2 ds.w
-ptr_va ds.w
-ptr_vb ds.w
-sum ds.b
-
-
+	
+	segment 'ram0'
+duty_mode ds.b ; 0= 20%, 1=80%
 
 	segment 'rom'
+
+VALUE20 DC.W 4000 ;0X0FA0
+VALUE80 DC.W 16000 ;0X3E80
+
 main.l
 	; initialize SP
 	ldw X,#stack_end
@@ -54,53 +50,94 @@ clear_stack.l
 	cpw X,#stack_end	
 	jrule clear_stack
 	
-	ldw X, #6
-	mov va, #10
-	ldw va2, X
-	ldw X, #10
-	mov vb, #6
-	ldw vb2, X
+init
+	;set up timer with 200Hz
+	; timer 2 setup
+	BSET PD_DDR, #4
+	BSET PD_CR1, #4
+	BSET PD_ODR, #4
+	MOV TIM2_CR1,#%0000001 ; counter enable ON 
+	MOV TIM2_IER,#$00 ; no interrupts are required for PWM 
+	MOV TIM2_CCMR1,#%01100000 ; PWM mode 1 + CC1 as output 
+	MOV TIM2_CCER1,#%00000001 ; CC1 output ENABLED 
+	LDW X, #$4e20
+	ld A, XH
+	ld TIM2_ARRH, A
+	ld A, XL
+	ld TIM2_ARRL, A
+	; INITIAL CCR
+	LDW X, VALUE20
+	ld A, XH
+	ld TIM2_CCR1H, A
+	ld A, XL
+	ld TIM2_CCR1L, A
 
-	ldw X, #va
-	ldw Y, #vb
-	ldw ptr_va, X
-	ldw ptr_vb, Y
-	push ptr_va
-	push ptr_vb
 	
+	; timer 3 setup
+	MOV TIM3_CR1, #$0
+	MOV TIM3_PSCR, #$07
+	MOV TIM3_EGR, #$01
+	MOV TIM3_IER, #$01
+	MOV TIM3_ARRH, #$7A
+	MOV TIM3_ARRL, #$12
+	MOV TIM3_SR1, #$00
+	
+	; setup E5 as interrupt at rising edge only
+	MOV PE_DDR, #$0
+	BSET PE_CR1, #5
+	BSET PE_CR2, #5
+	MOV EXTI_CR2, #$01
 
-	call adder8I ; call subroutine
-	pop a
-	pop a
-	
-	ldw X, va2
-	pushw X
-	ldw X, vb2
-	pushw X
-	
-	call adder16I
-	popw Y
-	popw X
-
+	RIM
 	
 infinite_loop.l
+	LD A, TIM3_CR1
+	CP A, #$01
+	jreq infinite_loop
+	BSET TIM3_CR1, #0
 	jra infinite_loop
-	
-adder8I
-	ldw X, #1
-	ld a, ([ptr_va],X)
-	add a, ([ptr_vb],X)
-	
-	ret
 
-adder16I 
-	ldw X, (3,SP)
-	addw X, (5,SP)
-	ret
 	interrupt NonHandledInterrupt
 NonHandledInterrupt.l
 	iret
 
+	interrupt ISR_TIM3
+ISR_TIM3
+	BRES TIM3_SR1, #0
+	BRES TIM3_CR1, #0
+	ld A, duty_mode
+	cp A, #$0
+	jreq change_mode_to_80 ; change to mode 1
+	jp change_mode_to_20 ; change to mode 0
+end_interrupt_tim3
+	iret
+	
+change_mode_to_20
+	; insert value CCR
+	LDW X, VALUE20
+	ld A, XH
+	ld TIM2_CCR1H, A
+	ld A, XL
+	ld TIM2_CCR1L, A
+	; change duty_mode flagg
+	MOV duty_mode, #$0
+	jp end_interrupt_tim3
+
+change_mode_to_80
+	; insert value CCR
+	LDW X, VALUE80
+	ld A, XH
+	ld TIM2_CCR1H, A
+	ld A, XL
+	ld TIM2_CCR1L, A
+	; change duty_mode flag.
+	MOV duty_mode, #$1
+	jp end_interrupt_tim3
+
+	interrupt ISR_PE
+ISR_PE
+	iret
+	
 	segment 'vectit'
 	dc.l {$82000000+main}									; reset
 	dc.l {$82000000+NonHandledInterrupt}	; trap
@@ -111,7 +148,7 @@ NonHandledInterrupt.l
 	dc.l {$82000000+NonHandledInterrupt}	; irq4
 	dc.l {$82000000+NonHandledInterrupt}	; irq5
 	dc.l {$82000000+NonHandledInterrupt}	; irq6
-	dc.l {$82000000+NonHandledInterrupt}	; irq7
+	dc.l {$82000000+ISR_PE}	; irq7
 	dc.l {$82000000+NonHandledInterrupt}	; irq8
 	dc.l {$82000000+NonHandledInterrupt}	; irq9
 	dc.l {$82000000+NonHandledInterrupt}	; irq10
@@ -119,7 +156,7 @@ NonHandledInterrupt.l
 	dc.l {$82000000+NonHandledInterrupt}	; irq12
 	dc.l {$82000000+NonHandledInterrupt}	; irq13
 	dc.l {$82000000+NonHandledInterrupt}	; irq14
-	dc.l {$82000000+NonHandledInterrupt}	; irq15
+	dc.l {$82000000+ISR_TIM3}	; irq15
 	dc.l {$82000000+NonHandledInterrupt}	; irq16
 	dc.l {$82000000+NonHandledInterrupt}	; irq17
 	dc.l {$82000000+NonHandledInterrupt}	; irq18

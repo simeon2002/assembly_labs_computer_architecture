@@ -1,6 +1,6 @@
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:58 2024
 Page 1  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
    1                         stm8/     
    2                         
@@ -59,9 +59,9 @@ Page 1  Assembler
   41  00500E                       .PC_CR2   DS.B     1             ; Port C control register 2
   42                         
   43                         ; Port D at 0x500f
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:58 2024
 Page 2  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
   44                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                ;;;;;;
@@ -120,9 +120,9 @@ Page 2  Assembler
   80  005065                       reserved4  DS.B     59            ; unused
   81                         
   82                         ; External Interrupt Control Register (ITC) at 0x50a0
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:58 2024
 Page 3  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
   83                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                ;;;;;;
@@ -181,9 +181,9 @@ Page 3  Assembler
  123                         
  124                         ; Auto Wake-Up (AWU) at 0x50f0
  125                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:58 2024
 Page 4  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
                                ;;;;;;
  126  0050F0                       .AWU_CSR  DS.B     1             ; AWU Control/Status Register
@@ -242,9 +242,9 @@ Page 4  Assembler
                                ;;;;;;
  168  005240                       .UART2_SR  DS.B     1             ; UART2 Status Register
  169  005241                       .UART2_DR  DS.B     1             ; UART2 Data Register
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:58 2024
 Page 5  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
  170  005242                       .UART2_BRR1  DS.B     1             ; UART2 Baud Rate Register 1
  171  005243                       .UART2_BRR2  DS.B     1             ; UART2 Baud Rate Register 2
@@ -303,9 +303,9 @@ Page 5  Assembler
  212  00526C                       .TIM1_CCR4L  DS.B     1             ; Data bits Low
  213  00526D                       .TIM1_BKR  DS.B     1             ; TIM1 Break register
  214  00526E                       .TIM1_DTR  DS.B     1             ; TIM1 Dead-time register
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:58 2024
 Page 6  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
  215  00526F                       .TIM1_OISR  DS.B     1             ; TIM1 Output idle state 
                                                                 ;register
@@ -364,9 +364,9 @@ Page 6  Assembler
  254  005329                       .TIM3_CNTRL  DS.B     1             ; Data bits Low
  255  00532A                       .TIM3_PSCR  DS.B     1             ; TIM3 Prescaler register
  256  00532B                       .TIM3_ARRH  DS.B     1             ; Data bits High
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:58 2024
 Page 7  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
  257  00532C                       .TIM3_ARRL  DS.B     1             ; Data bits Low
  258  00532D                       .TIM3_CCR1H  DS.B     1             ; Data bits High
@@ -425,9 +425,9 @@ Page 7  Assembler
  307  005409                       .ADC_HTRL  DS.B     1             ; High Threshold Register Low
  308  00540A                       .ADC_LTRH  DS.B     1             ; Low Threshold Register High
  309  00540B                       .ADC_LTRL  DS.B     1             ; Low Threshold Register Low
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:58 2024
 Page 8  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
  310  00540C                       .ADC_AWSRH  DS.B     1             ; Analog Watchdog Status 
                                                                 ;register High
@@ -465,9 +465,9 @@ Page 8  Assembler
                                                                 ;register 7
  330                         
  331  007F77                                 end      
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:58 2024
 Page 9  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
 Symbol Name                       Value     Call       Type  Scope      Rel.  Line  Privacy  Segment   Size  Bytes File
 
@@ -526,9 +526,9 @@ CLK_PCKENR2                           50CA         no  WORD  Internal   ABS    1
 CLK_CANCCR                            50CB         no  WORD  Internal   ABS    106  public   bss          1     1  -
 CLK_HSITRIMR                          50CC         no  WORD  Internal   ABS    107  public   bss          1     1  -
 CLK_SWIMCCR                           50CD         no  WORD  Internal   ABS    108  public   bss          1     1  -
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:58 2024
 Page 10  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
 CFG_GCR                               7F60         no  WORD  Internal   ABS    318  public   bss          1     1  -
 
@@ -587,9 +587,9 @@ PC_CR2                                500E         no  WORD  Internal   ABS     
 PD_ODR                                500F         no  WORD  Internal   ABS     45  public   bss          1     1  -
 PD_IDR                                5010         no  WORD  Internal   ABS     46  public   bss          1     1  -
 PD_DDR                                5011         no  WORD  Internal   ABS     47  public   bss          1     1  -
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:58 2024
 Page 11  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
 PD_CR1                                5012         no  WORD  Internal   ABS     48  public   bss          1     1  -
 PD_CR2                                5013         no  WORD  Internal   ABS     49  public   bss          1     1  -
@@ -648,9 +648,9 @@ TIM1_BKR                              526D         no  WORD  Internal   ABS    2
 TIM1_DTR                              526E         no  WORD  Internal   ABS    214  public   bss          1     1  -
 TIM1_OISR                             526F         no  WORD  Internal   ABS    215  public   bss          1     1  -
 TIM2_CR1                              5300         no  WORD  Internal   ABS    220  public   bss          1     1  -
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:58 2024
 Page 12  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
 TIM2_IER                              5301         no  WORD  Internal   ABS    221  public   bss          1     1  -
 TIM2_SR1                              5302         no  WORD  Internal   ABS    222  public   bss          1     1  -
@@ -709,9 +709,9 @@ UART2_CR5                             5248         no  WORD  Internal   ABS    1
 UART2_CR6                             5249         no  WORD  Internal   ABS    177  public   bss          1     1  -
 UART2_GTR                             524A         no  WORD  Internal   ABS    178  public   bss          1     1  -
 UART2_PSCR                            524B         no  WORD  Internal   ABS    179  public   bss          1     1  -
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:58 2024
 Page 13  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
 
 WWDG_CR                               50D1         no  WORD  Internal   ABS    113  public   bss          1     1  -
@@ -742,4 +742,4 @@ reserved22                            7F61         no  WORD  Internal   ABS    3
 
 
 240 labels
-No errors on assembly of 'c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.asm'
+No errors on assembly of 'c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm'

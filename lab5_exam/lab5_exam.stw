@@ -4,13 +4,9 @@
 Keyword=ST7Workspace-V0.7
 
 [Project0]
-Filename=lab4_adc.stp
+Filename=ex1.stp
 Dependencies=
 
 [Project1]
-Filename=indirect_addressing.stp
-Dependencies=
-
-[Project2]
-Filename=parameter_passing.stp
+Filename=ex2.stp
 Dependencies=

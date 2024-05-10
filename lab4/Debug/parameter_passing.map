@@ -2,9 +2,9 @@
 Segment List
 ------------
 
-c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm[1]    6-   11       100 -      102                 'ram1'  [void]
-c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm[2]   12-   83      8080 -     80D3                 'rom'  [text]
-c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm[3]   84-  117      8000 -     807F                 'vectit'  [data]
+c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm[1]    6-   16       100 -      10A                 'ram1'  [void]
+c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm[2]   17-  103      8080 -     80F1                 'rom'  [text]
+c:\users\simeo\qsync\university\computer architectures\lab4\main_parameter_passing.asm[3]  104-  137      8000 -     807F                 'vectit'  [data]
 c:\users\simeo\qsync\university\computer architectures\lab4\stm8s105k.asm[2]   16-  330      5000 -     7F76                 'periph2'  [void]
 
 
@@ -12,10 +12,10 @@ Class List
 ----------
 
 0 '        ram0'   byte from        0 to FFFFFFFF (lim       FF) =  0% V
-0 '        ram1'   byte from      100 to      102 (lim      5FF) =  0% D
+0 '        ram1'   byte from      100 to      10A (lim      5FF) =  0% D
 0 '       stack'   byte from      600 to      5FF (lim      7FF) =  0% V
 0 '      eeprom'   byte from     4000 to     3FFF (lim     43FF) =  0% V
-0 '         rom'   byte from     8080 to     80D3 (lim     BFFF) =  0% C
+0 '         rom'   byte from     8080 to     80F1 (lim     BFFF) =  0% C
 0 '      vectit'   byte from     8000 to     807F (lim     807F) =100% S
 0 '      periph'   byte from        0 to FFFFFFFF (lim       7F) =  0% V
 0 '     periph2'   byte from     5000 to     7F76 (lim FFFFFFFF) =  0% D

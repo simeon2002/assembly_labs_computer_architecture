@@ -1,6 +1,6 @@
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:14 2024
 Page 1  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\mapping.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\mapping.asm
 
    1                         stm8/     
    2                                                          ;-------------------------------
@@ -60,17 +60,17 @@ Page 1  Assembler
                                                                 ; bits long
   25                                   segment  byte at 8000-807F 'vectit'
   26                         
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:14 2024
 Page 2  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\mapping.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\mapping.asm
 
   27  008000                                 END      
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Thu May 09 23:11:56 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:14 2024
 Page 3  Assembler
-                                               c:\users\simeo\qsync\university\computer architectures\lab4\mapping.asm
+                                               c:\users\simeo\qsync\university\computer architectures\lab5_exam\mapping.asm
 
 Symbol Name                       Value     Call       Type  Scope      Rel.  Line  Privacy  Segment   Size  Bytes File
 
 
 0 labels
-No errors on assembly of 'c:\users\simeo\qsync\university\computer architectures\lab4\mapping.asm'
+No errors on assembly of 'c:\users\simeo\qsync\university\computer architectures\lab5_exam\mapping.asm'
