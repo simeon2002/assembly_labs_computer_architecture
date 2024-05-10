@@ -10,3 +10,7 @@ Dependencies=
 [Project1]
 Filename=ex2.stp
 Dependencies=
+
+[Project2]
+Filename=ex3.stp
+Dependencies=

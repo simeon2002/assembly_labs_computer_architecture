@@ -1,4 +1,4 @@
-STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:14 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 11:31:35 2024
 Page 1  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\mapping.asm
 
@@ -60,12 +60,12 @@ Page 1  Assembler
                                                                 ; bits long
   25                                   segment  byte at 8000-807F 'vectit'
   26                         
-STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:14 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 11:31:35 2024
 Page 2  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\mapping.asm
 
   27  008000                                 END      
-STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 09:26:14 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 11:31:35 2024
 Page 3  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\mapping.asm
 

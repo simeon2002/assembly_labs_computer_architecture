@@ -1,4 +1,4 @@
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:45:21 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:31:36 2024
 Page 1  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
@@ -59,7 +59,7 @@ Page 1  Assembler
   41  00500E                       .PC_CR2   DS.B     1             ; Port C control register 2
   42                         
   43                         ; Port D at 0x500f
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:45:21 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:31:36 2024
 Page 2  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
@@ -120,7 +120,7 @@ Page 2  Assembler
   80  005065                       reserved4  DS.B     59            ; unused
   81                         
   82                         ; External Interrupt Control Register (ITC) at 0x50a0
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:45:21 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:31:36 2024
 Page 3  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
@@ -181,7 +181,7 @@ Page 3  Assembler
  123                         
  124                         ; Auto Wake-Up (AWU) at 0x50f0
  125                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:45:21 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:31:36 2024
 Page 4  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
@@ -242,7 +242,7 @@ Page 4  Assembler
                                ;;;;;;
  168  005240                       .UART2_SR  DS.B     1             ; UART2 Status Register
  169  005241                       .UART2_DR  DS.B     1             ; UART2 Data Register
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:45:21 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:31:36 2024
 Page 5  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
@@ -303,7 +303,7 @@ Page 5  Assembler
  212  00526C                       .TIM1_CCR4L  DS.B     1             ; Data bits Low
  213  00526D                       .TIM1_BKR  DS.B     1             ; TIM1 Break register
  214  00526E                       .TIM1_DTR  DS.B     1             ; TIM1 Dead-time register
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:45:21 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:31:36 2024
 Page 6  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
@@ -364,7 +364,7 @@ Page 6  Assembler
  254  005329                       .TIM3_CNTRL  DS.B     1             ; Data bits Low
  255  00532A                       .TIM3_PSCR  DS.B     1             ; TIM3 Prescaler register
  256  00532B                       .TIM3_ARRH  DS.B     1             ; Data bits High
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:45:21 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:31:36 2024
 Page 7  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
@@ -425,7 +425,7 @@ Page 7  Assembler
  307  005409                       .ADC_HTRL  DS.B     1             ; High Threshold Register Low
  308  00540A                       .ADC_LTRH  DS.B     1             ; Low Threshold Register High
  309  00540B                       .ADC_LTRL  DS.B     1             ; Low Threshold Register Low
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:45:21 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:31:36 2024
 Page 8  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
@@ -465,7 +465,7 @@ Page 8  Assembler
                                                                 ;register 7
  330                         
  331  007F77                                 end      
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:45:21 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:31:36 2024
 Page 9  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
@@ -526,7 +526,7 @@ CLK_PCKENR2                           50CA         no  WORD  Internal   ABS    1
 CLK_CANCCR                            50CB         no  WORD  Internal   ABS    106  public   bss          1     1  -
 CLK_HSITRIMR                          50CC         no  WORD  Internal   ABS    107  public   bss          1     1  -
 CLK_SWIMCCR                           50CD         no  WORD  Internal   ABS    108  public   bss          1     1  -
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:45:21 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:31:36 2024
 Page 10  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
@@ -587,7 +587,7 @@ PC_CR2                                500E         no  WORD  Internal   ABS     
 PD_ODR                                500F         no  WORD  Internal   ABS     45  public   bss          1     1  -
 PD_IDR                                5010         no  WORD  Internal   ABS     46  public   bss          1     1  -
 PD_DDR                                5011         no  WORD  Internal   ABS     47  public   bss          1     1  -
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:45:21 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:31:36 2024
 Page 11  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
@@ -648,7 +648,7 @@ TIM1_BKR                              526D         no  WORD  Internal   ABS    2
 TIM1_DTR                              526E         no  WORD  Internal   ABS    214  public   bss          1     1  -
 TIM1_OISR                             526F         no  WORD  Internal   ABS    215  public   bss          1     1  -
 TIM2_CR1                              5300         no  WORD  Internal   ABS    220  public   bss          1     1  -
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:45:21 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:31:36 2024
 Page 12  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 
@@ -709,7 +709,7 @@ UART2_CR5                             5248         no  WORD  Internal   ABS    1
 UART2_CR6                             5249         no  WORD  Internal   ABS    177  public   bss          1     1  -
 UART2_GTR                             524A         no  WORD  Internal   ABS    178  public   bss          1     1  -
 UART2_PSCR                            524B         no  WORD  Internal   ABS    179  public   bss          1     1  -
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:45:21 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:31:36 2024
 Page 13  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm
 

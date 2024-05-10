@@ -1,4 +1,4 @@
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 1  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -60,7 +60,7 @@ Page 1  Assembler
   29  000000                                 EXTERN   PB_ODR.w      ; Port B data output latch 
                                                                 ;register
   30                         
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 2  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -121,7 +121,7 @@ Page 2  Assembler
   72  000000                                 EXTERN   PE_DDR.w      ; Port E data direction 
                                                                 ;register
   73                         
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 3  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -182,7 +182,7 @@ Page 3  Assembler
                                                                 ;register 2
  116                         
  117                         ; Reset (RST)
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 4  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -243,7 +243,7 @@ Page 4  Assembler
  161  000000                                 EXTERN   IWDG_KR.w     ; IWDG Key Register
  162                         
  163  000000                                 EXTERN   IWDG_PR.w     ; IWDG Prescaler Register
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 5  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -304,7 +304,7 @@ Page 5  Assembler
  211  000000                                 EXTERN   I2C_OARH.w    ; I2C Own address register high
  212                         
  213  000000                                 EXTERN   I2C_DR.w      ; I2C data register
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 6  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -365,7 +365,7 @@ Page 6  Assembler
  262                         
  263  000000                                 EXTERN   TIM1_CR2.w    ; TIM1 Control register 2
  264                         
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 7  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -426,7 +426,7 @@ Page 7  Assembler
  308                         
  309  000000                                 EXTERN   TIM1_CCR2L.w  ; Data bits Low
  310                         
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 8  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -487,7 +487,7 @@ Page 8  Assembler
  356  000000                                 EXTERN   TIM2_ARRL.w   ; Data bits Low
  357                         
  358  000000                                 EXTERN   TIM2_CCR1H.w  ; Data bits High
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 9  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -548,7 +548,7 @@ Page 9  Assembler
  407                         ; 8-Bit  Timer 4 (TIM4)
  408                         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                ;;;;;;
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 10  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -609,7 +609,7 @@ Page 10  Assembler
  460                         
  461  000000                                 EXTERN   ADC_DB8RL.w   ; Data Buffer register 8 Low
  462                         
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 11  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -670,7 +670,7 @@ Page 11  Assembler
  509  000000                                 EXTERN   ITC_SPR2.w    ; Interrupt Software priority 
                                                                 ;register 2
  510                         
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 12  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -732,7 +732,7 @@ Page 12  Assembler
   43  008099   AE0600                        ldw      X,#stack_start
   44                         clear_stack.l  
   45  00809C   7F                            clr      (X)
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 13  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -793,7 +793,7 @@ Page 13  Assembler
  100  00801C   820080DD                      dc.l     {$82000000+NonHandledInterrupt}  ; irq5
  101  008020   820080DD                      dc.l     {$82000000+NonHandledInterrupt}  ; irq6
  102  008024   820080DE                      dc.l     {$82000000+ISR_PE}  ; irq7
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 14  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -821,7 +821,7 @@ Page 14  Assembler
  124  00807C   820080DD                      dc.l     {$82000000+NonHandledInterrupt}  ; irq29
  125                         
  126  008080                                 end      
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 15  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -882,7 +882,7 @@ CLK_PCKENR2                           50CA         no  WORD  Internal   ABS    1
 CLK_CANCCR                            50CB         no  WORD  Internal   ABS    145  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.inc
 CLK_HSITRIMR                          50CC         no  WORD  Internal   ABS    147  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.inc
 CLK_SWIMCCR                           50CD         no  WORD  Internal   ABS    149  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.inc
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 16  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -943,7 +943,7 @@ PB_CR1                                5008         no  WORD  Internal   ABS     
 PB_CR2                                5009         no  WORD  Internal   ABS     37  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.inc
 PC_ODR                                500A         no  WORD  Internal   ABS     42  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.inc
 PC_IDR                                500B         no  WORD  Internal   ABS     44  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.inc
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 17  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -1004,7 +1004,7 @@ TIM1_CCR2H                            5267         no  WORD  Internal   ABS    3
 TIM1_CCR2L                            5268         no  WORD  Internal   ABS    309  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.inc
 TIM1_CCR3H                            5269         no  WORD  Internal   ABS    311  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.inc
 TIM1_CCR3L                            526A         no  WORD  Internal   ABS    313  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.inc
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 18  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 
@@ -1065,7 +1065,7 @@ UART2_BRR1                            5242         no  WORD  Internal   ABS    2
 UART2_BRR2                            5243         no  WORD  Internal   ABS    240  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.inc
 UART2_CR1                             5244         no  WORD  Internal   ABS    242  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.inc
 UART2_CR2                             5245         no  WORD  Internal   ABS    244  private  data         0     0  c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.inc
-STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 09:43:11 2024
+STMicroelectronics list file postprocessor v1.01   (C)2009-2024   Fri May 10 11:15:45 2024
 Page 19  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\main.asm
 

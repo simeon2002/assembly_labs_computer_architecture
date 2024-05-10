@@ -73,6 +73,19 @@ calculate_sum
 sum_done
 	ret
 	
+calculate_average
+	; get sum
+	call calculate_sum
+	; do division
+	ld A, sum
+	ld XL, A
+	ld A, DIVISOR
+	div X, A
+	ld remainder, A
+	ld A, XL
+	ld average_result, A
+	ret
+	
 calculate_sum_signed ;differnet list so other func required!
 	; fetching value
 	ldw X, index
@@ -88,18 +101,7 @@ calculate_sum_signed ;differnet list so other func required!
 sum_done_signed
 	ret
 	
-calculate_average
-	; get sum
-	call calculate_sum
-	; do division
-	ld A, sum
-	ld XL, A
-	ld A, DIVISOR
-	div X, A
-	ld remainder, A
-	ld A, XL
-	ld average_result, A
-	ret
+
 
 calculate_average_signed
 	ldw X, #0
