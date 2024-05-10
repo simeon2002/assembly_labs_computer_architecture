@@ -1,4 +1,4 @@
-STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 11:31:35 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 11:49:30 2024
 Page 1  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\ex3_2nd.asm
 
@@ -33,8 +33,8 @@ Page 1  Assembler
    8  000004                       remainder  ds.b     
    9                         
   10                                   segment  'rom'
-  11  000000   F0020404            list      dc.b     $F0, $02, $04, $04
-  12  000004   40F40000            list_signed  dc.b     $40, {-12}, 0, 0
+  11  000000   F0020410            list      dc.b     $F0, $02, $04, $10
+  12  000004   40580000            list_signed  dc.b     64, 88, 0, 0
   13  000008   0004                LIST_COUNT  DC.W     4
   14  00000A   04                  DIVISOR   DC.B     4
   15                         
@@ -60,7 +60,7 @@ Page 1  Assembler
   35  000100                       ram1_start.w  EQU      $100
   36  0005FF                       ram1_end.w  EQU      $5FF          
   37  000019   AE0100                        ldw      X,#ram1_start
-STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 11:31:35 2024
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 11:49:30 2024
 Page 2  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\ex3_2nd.asm
 
@@ -93,107 +93,135 @@ Page 2  Assembler
   64  000038 R D60000                        ld       A, (list,X)
   65                                                          ; doing and storing addition
   66  00003B R CB0000                        ADD      A, sum
-  67  00003E R C70000                        ld       sum, A
-  68  000041   5C                            incw     X
-  69  000042 R CF0000                        ldw      index, X
-  70  000045 R C30000                        cpw      X, LIST_COUNT
-  71  000048 R 2703                          jreq     sum_done
-  72  00004A R CC0000                        jp       calculate_sum
-  73                         sum_done  
-  74  00004D   81                            ret      
-  75                                   
-  76                         calculate_average  
-  77                                                          ; get sum
-  78  00004E R CD0000                        call     calculate_sum
-  79                                                          ; do division
-  80  000051 R C60000                        ld       A, sum
-  81  000054   97                            ld       XL, A
-  82  000055 R C60000                        ld       A, DIVISOR
-  83  000058   62                            div      X, A
-  84  000059 R C70000                        ld       remainder, A
-  85  00005C   9F                            ld       A, XL
-  86  00005D R C70000                        ld       average_result, A
-  87  000060   81                            ret      
-  88                                   
-  89                         calculate_sum_signed             ;differnet list so other func 
-                                                                ;required!
-  90                                                          ; fetching value
-  91  000061 R CE0000                        ldw      X, index
-  92  000064 R D60000                        ld       A, (list_signed,X)
-  93                                                          ; doing and storing addition
-STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 11:31:35 2024
+  67                                                          ; checking whether overflow is 
+                                                                ;present w C bit
+  68  00003E R 2407                          jrnc     no_carry
+  69                                                          ; if carry(i.e. overflow 
+                                                                ;present) move FF to average 
+                                                                ;result.
+  70  000040 R 35FF0000                      MOV      average_result, #$FF
+  71  000044 R CC0000                        jp       sum_done
+  72                         no_carry  
+  73  000047 R C70000                        ld       sum, A
+  74  00004A   5C                            incw     X
+  75  00004B R CF0000                        ldw      index, X
+  76  00004E R C30000                        cpw      X, LIST_COUNT
+  77  000051 R 2703                          jreq     sum_done
+  78  000053 R CC0000                        jp       calculate_sum
+  79                         sum_done  
+  80  000056   81                            ret      
+  81                                   
+  82                         calculate_average  
+  83                                                          ; get sum
+  84  000057 R CD0000                        call     calculate_sum
+  85                                                          ; check whether carry was 
+                                                                ;present.
+  86  00005A R C60000                        ld       A, average_result
+  87  00005D   A1FF                          cp       A, #$FF
+  88  00005F R 270F                          jreq     carry_present
+  89                                                          ; do division
+  90  000061 R C60000                        ld       A, sum
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 11:49:30 2024
 Page 3  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\ex3_2nd.asm
 
-  94  000067 R CB0000                        ADD      A, sum
-  95  00006A R C70000                        ld       sum, A
-  96  00006D   5C                            incw     X
-  97  00006E R CF0000                        ldw      index, X
-  98  000071 R C30000                        cpw      X, LIST_COUNT
-  99  000074 R 2703                          jreq     sum_done_signed
- 100  000076 R CC0000                        jp       calculate_sum_signed
- 101                         sum_done_signed  
- 102  000079   81                            ret      
- 103                                   
- 104                         
- 105                         
- 106                         calculate_average_signed  
- 107  00007A   AE0000                        ldw      X, #0
- 108  00007D R CF0000                        ldw      index, X      ; reset index
- 109  000080 R 35000000                      MOV      sum, #0       ; reset sum.
- 110  000084 R CD0000                        call     calculate_sum_signed
- 111                                                          ; do division
- 112  000087 R C60000                        ld       A, sum
- 113  00008A   47                            sra      A
- 114  00008B   47                            sra      A
- 115  00008C R C70000                        ld       average_result, A
- 116  00008F   81                            ret      
- 117                                   
- 118  000090 R                               interrupt NonHandledInterrupt
- 119                         NonHandledInterrupt.l  
- 120  000090   80                            iret     
+  91  000064   97                            ld       XL, A
+  92  000065 R C60000                        ld       A, DIVISOR
+  93  000068   62                            div      X, A
+  94  000069 R C70000                        ld       remainder, A
+  95  00006C   9F                            ld       A, XL
+  96  00006D R C70000                        ld       average_result, A
+  97                         carry_present  
+  98  000070   81                            ret      
+  99                                   
+ 100                         calculate_sum_signed             ;differnet list so other func 
+                                                                ;required!
+ 101                                                          ; fetching value
+ 102  000071 R CE0000                        ldw      X, index
+ 103  000074 R D60000                        ld       A, (list_signed,X)
+ 104                                                          ; doing and storing addition
+ 105  000077 R CB0000                        ADD      A, sum
+ 106                                                          ; checking for overflow present
+ 107  00007A R 2807                          jrnv     no_overflow_signed
+ 108                                                          ; if overflow present move FF to
+                                                                ; average result and be done
+ 109  00007C R 35FF0000                      MOV      average_result, #$FF
+ 110  000080 R CC0000                        jp       sum_done_signed
+ 111                         no_overflow_signed  
+ 112  000083 R C70000                        ld       sum, A
+ 113  000086   5C                            incw     X
+ 114  000087 R CF0000                        ldw      index, X
+ 115  00008A R C30000                        cpw      X, LIST_COUNT
+ 116  00008D R 2703                          jreq     sum_done_signed
+ 117  00008F R CC0000                        jp       calculate_sum_signed
+ 118                         sum_done_signed  
+ 119  000092   81                            ret      
+ 120                                   
  121                         
  122                         
- 123                                   segment  'vectit'
- 124  000000 R 00000000                      dc.l     {$82000000+main}  ; reset
- 125  000004 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; trap
- 126  000008 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq0
- 127  00000C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq1
- 128  000010 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq2
- 129  000014 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq3
- 130  000018 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq4
- 131  00001C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq5
- 132  000020 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq6
- 133  000024 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq7
- 134  000028 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq8
- 135  00002C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq9
- 136  000030 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq10
- 137  000034 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq11
- 138  000038 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq12
- 139  00003C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq13
- 140  000040 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq14
- 141  000044 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq15
- 142  000048 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq16
- 143  00004C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq17
- 144  000050 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq18
- 145  000054 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq19
- 146  000058 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq20
- 147  00005C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq21
- 148  000060 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq22
- 149  000064 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq23
- 150  000068 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq24
-STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 11:31:35 2024
+ 123                         calculate_average_signed  
+ 124  000093   AE0000                        ldw      X, #0
+ 125  000096 R CF0000                        ldw      index, X      ; reset index
+ 126  000099 R 35000000                      MOV      sum, #0       ; reset sum.
+ 127  00009D R CD0000                        call     calculate_sum_signed
+ 128                                                          ; check for overflow to skip 
+                                                                ;division
+ 129  0000A0 R C60000                        ld       A, average_result
+ 130  0000A3   A1FF                          cp       A, #$FF
+ 131  0000A5 R 2708                          jreq     overflow_present_signed
+ 132                                                          ; do division
+ 133  0000A7 R C60000                        ld       A, sum
+ 134  0000AA   47                            sra      A
+ 135  0000AB   47                            sra      A
+ 136  0000AC R C70000                        ld       average_result, A
+ 137                         overflow_present_signed  
+ 138  0000AF   81                            ret      
+ 139                                   
+ 140  0000B0 R                               interrupt NonHandledInterrupt
+ 141                         NonHandledInterrupt.l  
+ 142  0000B0   80                            iret     
+ 143                         
+ 144                         
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 11:49:30 2024
 Page 4  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\ex3_2nd.asm
 
- 151  00006C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq25
- 152  000070 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq26
- 153  000074 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq27
- 154  000078 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq28
- 155  00007C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq29
- 156                         
- 157  000080                                 end      
-STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 11:31:35 2024
+ 145                                   segment  'vectit'
+ 146  000000 R 00000000                      dc.l     {$82000000+main}  ; reset
+ 147  000004 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; trap
+ 148  000008 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq0
+ 149  00000C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq1
+ 150  000010 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq2
+ 151  000014 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq3
+ 152  000018 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq4
+ 153  00001C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq5
+ 154  000020 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq6
+ 155  000024 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq7
+ 156  000028 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq8
+ 157  00002C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq9
+ 158  000030 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq10
+ 159  000034 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq11
+ 160  000038 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq12
+ 161  00003C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq13
+ 162  000040 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq14
+ 163  000044 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq15
+ 164  000048 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq16
+ 165  00004C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq17
+ 166  000050 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq18
+ 167  000054 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq19
+ 168  000058 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq20
+ 169  00005C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq21
+ 170  000060 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq22
+ 171  000064 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq23
+ 172  000068 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq24
+ 173  00006C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq25
+ 174  000070 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq26
+ 175  000074 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq27
+ 176  000078 R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq28
+ 177  00007C R 00000000                      dc.l     {$82000000+NonHandledInterrupt}  ; irq29
+ 178                         
+ 179  000080                                 end      
+STMicroelectronics assembler v4.52   (C)1987-2024   Fri May 10 11:49:30 2024
 Page 5  Assembler
                                                c:\users\simeo\qsync\university\computer architectures\lab5_exam\ex3_2nd.asm
 
@@ -203,7 +231,7 @@ DIVISOR                               000A         no  WORD  Internal   rel     
 
 LIST_COUNT                            0008         no  WORD  Internal   rel     13  private  textdata     2     2  -
 
-NonHandledInterrupt               00000090  interrupt  LONG  Internal   rel    119  private  textdata     1     0  -
+NonHandledInterrupt               000000B0  interrupt  LONG  Internal   rel    141  private  textdata     1     0  -
 
 average_result                        0003         no  WORD  Internal   rel      7  private  bss          1     1  -
 
@@ -211,10 +239,11 @@ clear_ram0                        00000012         no  LONG  Internal   rel     
 clear_ram1                        0000001C         no  LONG  Internal   rel     38  private  textdata    10     0  -
 clear_stack                       00000026         no  LONG  Internal   rel     49  private  textdata     7     0  -
 calc_done                             0033         no  WORD  Internal   rel     58  private  textdata     2     0  -
-calculate_sum                         0035         no  WORD  Internal   rel     61  private  textdata    24     0  -
-calculate_average                     004E         no  WORD  Internal   rel     76  private  textdata    19     0  -
-calculate_sum_signed                  0061         no  WORD  Internal   rel     89  private  textdata    24     0  -
-calculate_average_signed              007A         no  WORD  Internal   rel    106  private  textdata    22     0  -
+calculate_sum                         0035         no  WORD  Internal   rel     61  private  textdata    18     0  -
+calculate_average                     0057         no  WORD  Internal   rel     82  private  textdata    25     0  -
+carry_present                         0070         no  WORD  Internal   rel     97  private  textdata     1     0  -
+calculate_sum_signed                  0071         no  WORD  Internal   rel    100  private  textdata    18     0  -
+calculate_average_signed              0093         no  WORD  Internal   rel    123  private  textdata    28     0  -
 
 index                                 0000         no  WORD  Internal   rel      5  private  bss          2     2  -
 infinite_loop                     0000002D         no  LONG  Internal   rel     55  private  textdata     6     0  -
@@ -223,6 +252,11 @@ list                                  0000         no  WORD  Internal   rel     
 list_signed                           0004         no  WORD  Internal   rel     12  private  textdata     4     1  -
 
 main                              0000000B         no  LONG  Internal   rel     16  private  textdata     7     0  -
+
+no_carry                              0047         no  WORD  Internal   rel     72  private  textdata    15     0  -
+no_overflow_signed                    0083         no  WORD  Internal   rel    111  private  textdata    15     0  -
+
+overflow_present_signed               00AF         no  WORD  Internal   rel    137  private  textdata     1     0  -
 
 remainder                             0004         no  WORD  Internal   rel      8  private  bss          1     1  -
 ram0_start                              00         no  BYTE  Internal   ABS     23  private  textdata     0     0  -
@@ -233,9 +267,9 @@ ram1_end                              05FF         no  WORD  Internal   ABS     
 sum                                   0002         no  WORD  Internal   rel      6  private  bss          1     1  -
 stack_start                           0600         no  WORD  Internal   ABS     46  private  textdata     0     0  -
 stack_end                             07FF         no  WORD  Internal   ABS     47  private  textdata     0     0  -
-sum_done                              004D         no  WORD  Internal   rel     73  private  textdata     1     0  -
-sum_done_signed                       0079         no  WORD  Internal   rel    101  private  textdata     1     0  -
+sum_done                              0056         no  WORD  Internal   rel     79  private  textdata     1     0  -
+sum_done_signed                       0092         no  WORD  Internal   rel    118  private  textdata     1     0  -
 
 
-27 labels
+31 labels
 No errors on assembly of 'c:\users\simeo\qsync\university\computer architectures\lab5_exam\ex3_2nd.asm'

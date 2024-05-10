@@ -3,8 +3,8 @@ Segment List
 ------------
 
 c:\users\simeo\qsync\university\computer architectures\lab5_exam\ex3_2nd.asm[1]    4-    9         0 -        4                 'ram0'  [void]
-c:\users\simeo\qsync\university\computer architectures\lab5_exam\ex3_2nd.asm[2]   10-  122      8080 -     8110                 'rom'  [textdata]
-c:\users\simeo\qsync\university\computer architectures\lab5_exam\ex3_2nd.asm[3]  123-  156      8000 -     807F                 'vectit'  [data]
+c:\users\simeo\qsync\university\computer architectures\lab5_exam\ex3_2nd.asm[2]   10-  144      8080 -     8130                 'rom'  [textdata]
+c:\users\simeo\qsync\university\computer architectures\lab5_exam\ex3_2nd.asm[3]  145-  178      8000 -     807F                 'vectit'  [data]
 c:\users\simeo\qsync\university\computer architectures\lab5_exam\stm8s105k.asm[2]   16-  330      5000 -     7F76                 'periph2'  [void]
 
 
@@ -15,7 +15,7 @@ Class List
 0 '        ram1'   byte from      100 to       FF (lim      5FF) =  0% V
 0 '       stack'   byte from      600 to      5FF (lim      7FF) =  0% V
 0 '      eeprom'   byte from     4000 to     3FFF (lim     43FF) =  0% V
-0 '         rom'   byte from     8080 to     8110 (lim     BFFF) =  0% CS
+0 '         rom'   byte from     8080 to     8130 (lim     BFFF) =  1% CS
 0 '      vectit'   byte from     8000 to     807F (lim     807F) =100% S
 0 '      periph'   byte from        0 to FFFFFFFF (lim       7F) =  0% V
 0 '     periph2'   byte from     5000 to     7F76 (lim FFFFFFFF) =  0% D

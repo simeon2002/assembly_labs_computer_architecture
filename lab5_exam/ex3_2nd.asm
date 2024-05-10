@@ -8,8 +8,8 @@ average_result ds.b ; same here.
 remainder ds.b
 
 	segment 'rom'
-list dc.b $F0, $02, $04, $04
-list_signed dc.b $40, {-12}, 0, 0
+list dc.b $F0, $02, $04, $10
+list_signed dc.b 64, 88, 0, 0
 LIST_COUNT DC.W 4
 DIVISOR DC.B 4
 
@@ -64,6 +64,12 @@ calculate_sum
 	ld A, (list,X)
 	; doing and storing addition
 	ADD A, sum
+	; checking whether overflow is present w C bit
+	jrnc no_carry
+	; if carry(i.e. overflow present) move FF to average result.
+	MOV average_result, #$FF
+	jp sum_done
+no_carry
 	ld sum, A
 	incw X
 	ldw index, X
@@ -76,6 +82,10 @@ sum_done
 calculate_average
 	; get sum
 	call calculate_sum
+	; check whether carry was present.
+	ld A, average_result
+	cp A, #$FF
+	jreq carry_present
 	; do division
 	ld A, sum
 	ld XL, A
@@ -84,6 +94,7 @@ calculate_average
 	ld remainder, A
 	ld A, XL
 	ld average_result, A
+carry_present
 	ret
 	
 calculate_sum_signed ;differnet list so other func required!
@@ -92,6 +103,12 @@ calculate_sum_signed ;differnet list so other func required!
 	ld A, (list_signed,X)
 	; doing and storing addition
 	ADD A, sum
+	; checking for overflow present
+	jrnv no_overflow_signed
+	; if overflow present move FF to average result and be done
+	MOV average_result, #$FF
+	jp sum_done_signed
+no_overflow_signed
 	ld sum, A
 	incw X
 	ldw index, X
@@ -108,11 +125,16 @@ calculate_average_signed
 	ldw index, X ; reset index
 	MOV sum, #0 ; reset sum.
 	call calculate_sum_signed
-		; do division
+	; check for overflow to skip division
+	ld A, average_result
+	cp A, #$FF
+	jreq overflow_present_signed
+	; do division
 	ld A, sum
 	sra A
 	sra A
 	ld average_result, A
+overflow_present_signed
 	ret
 	
 	interrupt NonHandledInterrupt
